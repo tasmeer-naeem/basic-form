@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body:before{
+   content: '';
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   background-image: url("image.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   filter: blur(5px);
+}
+.dv1{
+  position:absolute;
+  top: 55%;
+  left: 50%;
+  width: 600px;
+  height: 380px;
+  transform: translate(-50%,-50%);
+  background: rgba(0,0,0, 0.6);
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+}
+#dv2{
+  position: absolute;
+  left: 32%;
+  top: 10%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button{
+  background-color: orangered;
+  color: white;
+  width: 170px;
+  height: 30px;
+  border-style: none;
+  transform: translateY(-70px);
+}

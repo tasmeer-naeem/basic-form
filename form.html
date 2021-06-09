@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking Enquiry Form</title>
+    <link href="form.css" rel="stylesheet">
+    <script>
+      function display(){
+        var namee=document.getElementById("name").value;
+        var regx=/^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/;
+        if(regx.test(namee)){
+          document.getElementById("msg1").innerHTML="input is valid";
+        }
+        else
+        document.getElementById("msg1").innerHTML="input is invalid"
+      
+        var emaill=document.getElementById("email").value;
+        var regx1=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+        if(regx1.test(emaill)){
+          document.getElementById("msg2").innerHTML="input is valid";
+        }
+        else
+        document.getElementById("msg2").innerHTML="input is invalid"
+        
+        var nop=document.getElementById("no1").value;
+        var regx2=/^[0-9]+$/;
+        if(regx2.test(nop)){
+          document.getElementById("msg3").innerHTML="input is valid";
+        }
+        else
+        document.getElementById("msg3").innerHTML="input is invalid"
+        
+        var nod=document.getElementById("no2").value;
+        var regx3=/^[0-9]+$/;
+        if(regx3.test(nod)){
+          document.getElementById("msg4").innerHTML="input is valid";
+        }
+        else
+        document.getElementById("msg4").innerHTML="input is invalid"
+     
+      }
+    </script>
+</head>
+<body>
+  <div id="dv2"><h1>ROOM BOOKING ENQUIRY FORM</h1></div>
+    <div  class="dv1">
+      
+      <form action="">
+        <div id="dv3">
+        <table id="table1"  cellspacing="20px"  >
+          <tr>
+            <td>Your Name<br><input type="text" placeholder="Name" id=name><span id="msg1"></span></td>
+            <td> No.of Persons<br><input type="text" placeholder="1" id=no1><span id="msg3"></span></td>
+          </tr>
+          <tr>
+            <td>Your Email<br><input type="email" placeholder="Email"  id=email><span id="msg2"></span></td>
+            <td>No.of Days<br><input type="text" placeholder="1" id=no2><span id="msg4"></span></td>
+          </tr>
+          <tr>
+            <td>Your Enquiry Type<br><select>
+             <option value="Accomodation Enquiry">Accomodation Enquiry</option>
+             <option value="Travel Enquiry">Travel Enquiry</option>
+             <option value="Food Enquiry">Food Enquiry</option>
+            </select></td>
+            <td>Customer Enquiry<br><textarea rows="4" cols="30" placeholder="Your Queries"></textarea></td>
+          </tr>
+          <tr>
+            <td>Accomodation Enquiry<br><select>
+              <option  value="Air Condition Cabin">Air Condition Cabin</option>
+              <option value="No.of Rooms">NO.of Rooms</option>
+              <option value="lawn">Lawn</option>
+            </select></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Date Of Arrival<br><input type="date"></td>
+            <td><br><input type="button" class="btn" onclick="display()" value="SUBMIT"  ></td>
+          </tr>
+        </table></div>
+      </form>
+    
+     </div>
+</body>
+</html>
